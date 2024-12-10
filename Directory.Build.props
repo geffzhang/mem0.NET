@@ -1,7 +1,7 @@
 <Project>
     <PropertyGroup>
-        <Version>0.2.1</Version>
-        <AssemblyVersion>0.2.1</AssemblyVersion>
+        <Version>0.2.2</Version>
+        <AssemblyVersion>0.2.2</AssemblyVersion>
         <Authors>AIDotNet</Authors>
         <Company>AIDotNet</Company>
         <PackageId>$(AssemblyName)</PackageId>
@@ -11,7 +11,7 @@
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
         <SKVersion>1.32.0</SKVersion>
-        <MicrosoftVersion>8.0.0</MicrosoftVersion>
+        <MicrosoftVersion>8.0.1</MicrosoftVersion>
         <EntityFrameworkVersion>8.0.0</EntityFrameworkVersion>
         <QdrantVersion>1.12.0</QdrantVersion>
         <GenerateDocumentationFile>True</GenerateDocumentationFile>
