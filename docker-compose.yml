@@ -1,6 +1,6 @@
 ﻿services:
   qdrant:
-    image: registry.token-ai.cn/qdrant/qdrant:latest
+    image: qdrant/qdrant
     restart: always
     container_name: qdrant
     ports:

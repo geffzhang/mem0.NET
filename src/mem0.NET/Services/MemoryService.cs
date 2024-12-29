@@ -69,21 +69,26 @@ public class MemoryService(
     public async Task CreateMemoryAsync(CreateMemoryInput input)
     {
         var embeddings = await textEmbeddingGenerationService.GenerateEmbeddingAsync(input.Data);
+        
+        ApplicationContext.AddMemoryMetadata.Value ??= new Dictionary<string, string>();
 
         var filters = new Dictionary<string, object>();
         if (!string.IsNullOrEmpty(input.UserId))
         {
             filters.Add("user_id", input.UserId);
+            ApplicationContext.AddMemoryMetadata.Value?.Add("user_id", input.UserId);
         }
 
         if (!string.IsNullOrEmpty(input.AgentId))
         {
             filters.Add("agent_id", input.AgentId);
+            ApplicationContext.AddMemoryMetadata.Value?.Add("agent_id", input.AgentId);
         }
 
         if (!string.IsNullOrEmpty(input.RunId))
         {
             filters.Add("run_id", input.RunId);
+            ApplicationContext.AddMemoryMetadata.Value?.Add("run_id", input.RunId);
         }
 
         var chatHistory = new ChatHistory();
